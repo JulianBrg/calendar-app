@@ -1,23 +1,20 @@
-import React from 'react'
-import { useDispatch } from 'react-redux'
+import React from 'react';
+import { useDispatch } from 'react-redux';
 import { uiOpenModal } from '../../actions/ui';
 
 export const AddNewFab = () => {
 
     const dispatch = useDispatch();
 
-    const handleClickNew = (e) => {
-        dispatch(uiOpenModal());
+    const handleClickNew = () => {
+        dispatch( uiOpenModal() );
     }
-
-
-
 
 
     return (
         <button
             className="btn btn-primary fab"
-            onClick={handleClickNew}
+            onClick={ handleClickNew }
         >
             <i className="fas fa-plus"></i>
         </button>
